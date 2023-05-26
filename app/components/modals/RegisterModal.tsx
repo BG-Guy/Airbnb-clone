@@ -38,9 +38,7 @@ const RegisterModal = () => {
       .then(() => {
         registerModal.onClose()
       })
-      .catch((error) => {
-        console.log(error)
-      })
+      .catch((error) => {})
       .finally(() => {
         setIsLoading(false)
       })

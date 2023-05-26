@@ -83,7 +83,6 @@ const RentModal = () => {
 
   const onNext = () => {
     setStep((value) => value + 1)
-    console.log('val', step)
   }
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {

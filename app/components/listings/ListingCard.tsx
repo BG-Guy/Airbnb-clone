@@ -19,7 +19,7 @@ interface ListingCardProps {
   currentUser?: SafeUser | null
 }
 
-export const ListingCard: React.FC<ListingCardProps> = ({
+const ListingCard: React.FC<ListingCardProps> = ({
   data,
   reservation,
   onAction,
@@ -55,7 +55,6 @@ export const ListingCard: React.FC<ListingCardProps> = ({
     const end = new Date(reservation.endDate)
     return `${format(start, 'PP')} - ${format(end, 'PP')}}`
   }, [reservation])
-  console.log(data, 'data')
   return (
     <div
       onClick={() => router.push(`/listings/${data.id}`)}
@@ -125,3 +124,5 @@ export const ListingCard: React.FC<ListingCardProps> = ({
     </div>
   )
 }
+
+export default ListingCard
